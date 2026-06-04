@@ -24,8 +24,8 @@ lista_tuplas = list(uniao)
 
 #Passo 4: Percorrer a lista utilizando o for (meio confuso pra mim)
 
-#for reagente, lote, pureza in lista_tuplas:
-#    print(f"Frasco do Lote: {lote} | Reagente: {reagente} | Pureza: {pureza}%")
+for reagente, lote, pureza in lista_tuplas:
+    print(f"Frasco do Lote: {lote} | Reagente: {reagente} | Pureza: {pureza}%")
 
 #Passo 5: Verificar quais purezas são maiores ou iguais a 98%
 
