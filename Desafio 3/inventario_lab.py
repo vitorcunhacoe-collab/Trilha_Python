@@ -21,3 +21,26 @@ print(f"A quantidade total de reagentes diferentes é {n_reagentes_unicos}")
 uniao = zip(reagentes, lotes, purezas)
 lista_tuplas = list(uniao)
 #print(lista_tuplas)
+
+#Passo 4: Percorrer a lista utilizando o for (meio confuso pra mim)
+
+#for reagente, lote, pureza in lista_tuplas:
+#    print(f"Frasco do Lote: {lote} | Reagente: {reagente} | Pureza: {pureza}%")
+
+#Passo 5: Verificar quais purezas são maiores ou iguais a 98%
+
+#Vou fazer primeiro utilizando if normal
+
+#lotes_aprovados = []
+
+#for reagente, lote, pureza in lista_tuplas:
+#    print(f"Frasco do Lote: {lote} | Reagente: {reagente} | Pureza: {pureza}%")
+#    if pureza >= 98.0:
+#        lotes_aprovados.append(lote)
+
+#print(f"Esses são os lotes aprovados para experimentos sensíveis: {lotes_aprovados}")
+
+#deu certo, fazendo com listening comprehension:
+
+lotes_aprovados = [lote for reagente, lote, pureza in lista_tuplas if pureza >= 98.0]
+print(f"Esses são os lotes aprovados para experimentos sensíveis: {lotes_aprovados}")
